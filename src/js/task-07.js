@@ -2,8 +2,8 @@ const inputEl = document.querySelector('#font-size-control');
 
 const spanEl = document.querySelector("#text");
 
-inputEl.addEventListener('change', onRangeMove);
+inputEl.addEventListener('input', onRangeMove);
 
 function onRangeMove(event) {
-    console.log(event.currentTarget.checked);
+    spanEl.style.fontSize = event.target.value + "px";
 }
